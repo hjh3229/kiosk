@@ -5,6 +5,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        mainMenu();
+    }
+
+    public static void mainMenu() {
         // 메인 메뉴판에서 사용자가 선태할 수 있는 사항
         String[] mainMenu = {"커피 & 콜드브루", "라떼", "초코", "에이드 & 모히또", "스무디 & 프라페", "티 & 주스", "디저트"};
         // 장바구니, 주문 초기화 메뉴
@@ -33,25 +37,25 @@ public class Main {
             int selectedOrderNumber = orderNumber.nextInt();
             switch (selectedOrderNumber) { // HashMap 을 이용해서 단축가능하면 단축(람다식 이용해야 함)
                 case 1 :
-                    CoffeeAndColdBrewMenu.callSelectableMenu();
+                    CoffeeAndColdBrewMenuClass.callSelectableMenu();
                     break;
                 case 2 :
-                    LatteMenu.callSelectableMenu();
+                    LatteMenuClass.callSelectableMenu();
                     break;
                 case 3 :
-                    System.out.println("초코 메뉴 출력");
+                    ChocoMenuClass.callSelectableMenu();
                     break;
                 case 4 :
-                    System.out.println("에이드 메뉴 출력");
+                    AdeAndMojitoMenuClass.callSelectableMenu();
                     break;
                 case 5 :
-                    System.out.println("스무디 메뉴 출력");
+                    SmoothieAndFrappeMenuClass.callSelectableMenu();
                     break;
                 case 6 :
-                    System.out.println("티 메뉴 출력");
+                    TeaAndJuiceMenuClass.callSelectableMenu();
                     break;
                 case 7 :
-                    System.out.println("디저트 메뉴 출력");
+                    DessertMenuClass.callSelectableMenu();
                     break;
                 case 8 :
                     System.out.println("장바구니 출력");
