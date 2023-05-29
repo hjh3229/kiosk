@@ -351,6 +351,7 @@ class CheckShoppingList {
         if (check == 1) {
             System.out.println("확인");
             System.out.println();
+            Main.mainMenu();
         } else if (check == 2) {
             System.out.println("취소");
             System.out.println();
