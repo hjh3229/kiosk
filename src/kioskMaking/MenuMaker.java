@@ -11,6 +11,7 @@ public abstract class MenuMaker { // 각 메뉴판의 토대가 되는 추상 �
 
 class CoffeeAndColdBrewMenuClass {
     public static void callSelectableMenu() {
+        Main main = new Main();
         // 각 메뉴판마다 바뀌는 것 중 겹치는 것 객체화
         // 메뉴판 이름
         String menuName = "커피 & 콜드브루";
@@ -49,7 +50,7 @@ class CoffeeAndColdBrewMenuClass {
             } else if (selectedOrderNumber == coffeeAndColdBrewMenu.length + 2) {
                 System.out.println("주문을 취소하였습니다.");
                 System.out.println();
-                Main.mainMenu();
+                main.mainMenu();
             } else {
                 System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
                 System.out.println();
@@ -60,6 +61,7 @@ class CoffeeAndColdBrewMenuClass {
 
 class LatteMenuClass {
     public static void callSelectableMenu() {
+        Main main = new Main();
         // 메뉴판 이름
         String menuName = "라떼";
         // 장바구니, 주문 초기화 메뉴
@@ -96,7 +98,7 @@ class LatteMenuClass {
             } else if (selectedOrderNumber == latteMenu.length + 2) {
                 System.out.println("주문을 취소하였습니다.");
                 System.out.println();
-                Main.mainMenu();
+                main.mainMenu();
             } else {
                 System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
                 System.out.println();
@@ -107,6 +109,7 @@ class LatteMenuClass {
 
 class ChocoMenuClass {
     public static void callSelectableMenu() {
+        Main main = new Main();
         // 메뉴판 이름
         String menuName = "초코";
         // 장바구니, 주문 초기화 메뉴
@@ -143,7 +146,7 @@ class ChocoMenuClass {
             } else if (selectedOrderNumber == chocoMenu.length + 2) {
                 System.out.println("주문을 취소하였습니다.");
                 System.out.println();
-                Main.mainMenu();
+                main.mainMenu();
             } else {
                 System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
                 System.out.println();
@@ -154,6 +157,7 @@ class ChocoMenuClass {
 
 class AdeAndMojitoMenuClass {
     public static void callSelectableMenu() {
+        Main main = new Main();
         // 메뉴판 이름
         String menuName = "라떼";
         // 장바구니, 주문 초기화 메뉴
@@ -190,7 +194,7 @@ class AdeAndMojitoMenuClass {
             } else if (selectedOrderNumber == adeAndMojitoMenu.length + 2) {
                 System.out.println("주문을 취소하였습니다.");
                 System.out.println();
-                Main.mainMenu();
+                main.mainMenu();
             } else {
                 System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
                 System.out.println();
@@ -201,6 +205,7 @@ class AdeAndMojitoMenuClass {
 
 class SmoothieAndFrappeMenuClass {
     public static void callSelectableMenu() {
+        Main main = new Main();
         // 메뉴판 이름
         String menuName = "라떼";
         // 장바구니, 주문 초기화 메뉴
@@ -237,7 +242,7 @@ class SmoothieAndFrappeMenuClass {
             } else if (selectedOrderNumber == smoothieAndFrappeMenu.length + 2) {
                 System.out.println("주문을 취소하였습니다.");
                 System.out.println();
-                Main.mainMenu();
+                main.mainMenu();
             } else {
                 System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
                 System.out.println();
@@ -248,6 +253,7 @@ class SmoothieAndFrappeMenuClass {
 
 class TeaAndJuiceMenuClass {
     public static void callSelectableMenu() {
+        Main main = new Main();
         // 메뉴판 이름
         String menuName = "라떼";
         // 장바구니, 주문 초기화 메뉴
@@ -284,7 +290,7 @@ class TeaAndJuiceMenuClass {
             } else if (selectedOrderNumber == teaAndJuiceMenu.length + 2) {
                 System.out.println("주문을 취소하였습니다.");
                 System.out.println();
-                Main.mainMenu();
+                main.mainMenu();
             } else {
                 System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
                 System.out.println();
@@ -295,6 +301,7 @@ class TeaAndJuiceMenuClass {
 
 class DessertMenuClass {
     public static void callSelectableMenu() {
+        Main main = new Main();
         // 메뉴판 이름
         String menuName = "라떼";
         // 장바구니, 주문 초기화 메뉴
@@ -331,7 +338,7 @@ class DessertMenuClass {
             } else if (selectedOrderNumber == dessertMenu.length + 2) {
                 System.out.println("주문을 취소하였습니다.");
                 System.out.println();
-                Main.mainMenu();
+                main.mainMenu();
             } else {
                 System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
                 System.out.println();
@@ -340,24 +347,3 @@ class DessertMenuClass {
     }
 }
 
-class CheckShoppingList {
-    // 장바구니 추가 확인 메서드
-    public static void checkShoppingList(String[] menuName, int orderNumber) {
-        System.out.println(menuName[orderNumber - 1]);
-        System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
-        System.out.println("1. 확인        2. 취소");
-        Scanner scanner = new Scanner(System.in);
-        int check = scanner.nextInt();
-        if (check == 1) {
-            System.out.println("확인");
-            System.out.println();
-            Main.mainMenu();
-        } else if (check == 2) {
-            System.out.println("취소");
-            System.out.println();
-        } else {
-            System.out.println("잘못 입력하였습니다.");
-            System.out.println();
-        }
-    }
-}

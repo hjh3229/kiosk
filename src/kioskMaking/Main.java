@@ -5,10 +5,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        mainMenu();
+        Main main = new Main();
+        main.mainMenu();
     }
 
-    public static void mainMenu() {
+    public void mainMenu() {
         // 메인 메뉴판에서 사용자가 선태할 수 있는 사항
         String[] mainMenu = {"커피 & 콜드브루", "라떼", "초코", "에이드 & 모히또", "스무디 & 프라페", "티 & 주스", "디저트"};
         // 장바구니, 주문 초기화 메뉴
