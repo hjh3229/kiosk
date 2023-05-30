@@ -1,6 +1,6 @@
-package kioskMaking;
+package kioskMaking_2;
 
-public class Product extends Menu{
+public class Product extends Menu {
     private int menuPrice;
 
     public int getMenuPrice() {

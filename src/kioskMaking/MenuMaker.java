@@ -1,5 +1,7 @@
 package kioskMaking;
 
+//import kioskMaking_2.CheckShoppingList;
+//
 import java.util.Scanner;
 
 public abstract class MenuMaker { // 각 메뉴판의 토대가 되는 추상 클래스
@@ -43,7 +45,7 @@ class CoffeeAndColdBrewMenuClass {
             Scanner orderNumber = new Scanner(System.in);
             int selectedOrderNumber = orderNumber.nextInt();
             if (selectedOrderNumber >= 1 && selectedOrderNumber <= coffeeAndColdBrewMenu.length) {
-                CheckShoppingList.checkShoppingList(coffeeAndColdBrewMenu, selectedOrderNumber);
+//                CheckShoppingList.checkShoppingList(coffeeAndColdBrewMenu, selectedOrderNumber);
             } else if (selectedOrderNumber == coffeeAndColdBrewMenu.length + 1) {
                 System.out.println("장바구니 출력");
                 break;
@@ -91,7 +93,7 @@ class LatteMenuClass {
             Scanner orderNumber = new Scanner(System.in);
             int selectedOrderNumber = orderNumber.nextInt();
             if (selectedOrderNumber >= 1 && selectedOrderNumber <= latteMenu.length) {
-                CheckShoppingList.checkShoppingList(latteMenu, selectedOrderNumber);
+//                CheckShoppingList.checkShoppingList(latteMenu, selectedOrderNumber);
             } else if (selectedOrderNumber == latteMenu.length + 1) {
                 System.out.println("장바구니 출력");
                 break;
@@ -139,7 +141,7 @@ class ChocoMenuClass {
             Scanner orderNumber = new Scanner(System.in);
             int selectedOrderNumber = orderNumber.nextInt();
             if (selectedOrderNumber >= 1 && selectedOrderNumber <= chocoMenu.length) {
-                CheckShoppingList.checkShoppingList(chocoMenu, selectedOrderNumber);
+//                CheckShoppingList.checkShoppingList(chocoMenu, selectedOrderNumber);
             } else if (selectedOrderNumber == chocoMenu.length + 1) {
                 System.out.println("장바구니 출력");
                 break;
@@ -187,7 +189,7 @@ class AdeAndMojitoMenuClass {
             Scanner orderNumber = new Scanner(System.in);
             int selectedOrderNumber = orderNumber.nextInt();
             if (selectedOrderNumber >= 1 && selectedOrderNumber <= adeAndMojitoMenu.length) {
-                CheckShoppingList.checkShoppingList(adeAndMojitoMenu, selectedOrderNumber);
+//                CheckShoppingList.checkShoppingList(adeAndMojitoMenu, selectedOrderNumber);
             } else if (selectedOrderNumber == adeAndMojitoMenu.length + 1) {
                 System.out.println("장바구니 출력");
                 break;
@@ -235,7 +237,7 @@ class SmoothieAndFrappeMenuClass {
             Scanner orderNumber = new Scanner(System.in);
             int selectedOrderNumber = orderNumber.nextInt();
             if (selectedOrderNumber >= 1 && selectedOrderNumber <= smoothieAndFrappeMenu.length) {
-                CheckShoppingList.checkShoppingList(smoothieAndFrappeMenu, selectedOrderNumber);
+//                CheckShoppingList.checkShoppingList(smoothieAndFrappeMenu, selectedOrderNumber);
             } else if (selectedOrderNumber == smoothieAndFrappeMenu.length + 1) {
                 System.out.println("장바구니 출력");
                 break;
@@ -283,7 +285,7 @@ class TeaAndJuiceMenuClass {
             Scanner orderNumber = new Scanner(System.in);
             int selectedOrderNumber = orderNumber.nextInt();
             if (selectedOrderNumber >= 1 && selectedOrderNumber <= teaAndJuiceMenu.length) {
-                CheckShoppingList.checkShoppingList(teaAndJuiceMenu, selectedOrderNumber);
+//                CheckShoppingList.checkShoppingList(teaAndJuiceMenu, selectedOrderNumber);
             } else if (selectedOrderNumber == teaAndJuiceMenu.length + 1) {
                 System.out.println("장바구니 출력");
                 break;
@@ -331,7 +333,7 @@ class DessertMenuClass {
             Scanner orderNumber = new Scanner(System.in);
             int selectedOrderNumber = orderNumber.nextInt();
             if (selectedOrderNumber >= 1 && selectedOrderNumber <= dessertMenu.length) {
-                CheckShoppingList.checkShoppingList(dessertMenu, selectedOrderNumber);
+//                CheckShoppingList.checkShoppingList(dessertMenu, selectedOrderNumber);
             } else if (selectedOrderNumber == dessertMenu.length + 1) {
                 System.out.println("장바구니 출력");
                 break;
