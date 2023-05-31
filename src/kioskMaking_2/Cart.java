@@ -22,4 +22,8 @@ public class Cart {
     public String getMenuName() {
         return menuName;
     }
+
+    public int getPrice() {return price;}
+
+    public int getCount() {return count;}
 }

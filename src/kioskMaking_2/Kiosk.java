@@ -49,6 +49,8 @@ public class Kiosk {
         System.out.println("[주문 내역]");
         ord.printOrder();
         System.out.println();
+        System.out.println("총 주문 액수 : " + ord.sumPrice());
+        System.out.println();
         System.out.println("1. 확인       2. 취소");
 
         Scanner sc = new Scanner(System.in);

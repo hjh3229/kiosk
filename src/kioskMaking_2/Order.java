@@ -42,6 +42,15 @@ public class Order {
     public void rebootOrder() {
         order.clear();
     }
+
+    // 장바구니 금액 총합
+    public int sumPrice() {
+        int totalPrice = 0;
+        for (Cart cart : order) {
+            totalPrice += (cart.getPrice() * cart.getCount());
+        }
+        return totalPrice;
+    }
 }
 
 class Waiting {
