@@ -10,21 +10,24 @@ public class Main {
 
     public void kioskStarter() {
         MenuCollection menuCollection = new MenuCollection();
+        Kiosk kiosk = new Kiosk();
 
-        menuCollection.menuBar("메가커피");
+        while (true) {
+            menuCollection.menuBar("메가커피");
 
-        System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
-        int menuNumber = 1;
-        for (Menu menu : menuCollection.menuList()) {
-            System.out.println("| " + menuNumber +". "+ menu.toString());
-            menuNumber++;
+            System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
+            int menuNumber = 1;
+            for (Menu menu : menuCollection.menuList()) {
+                System.out.println("| " + menuNumber +". "+ menu.toString());
+                menuNumber++;
+            }
+            System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
+
+            Order order = new Order();
+            EachMenuBuilder eachMenuBuilder = new EachMenuBuilder();
+            kiosk.orderMenu(menuNumber);
+            Scanner sc = new Scanner(System.in);
+            eachMenuBuilder.buildEachMenu(sc.nextInt());
         }
-        System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
-
-        Order order = new Order();
-        EachMenuBuilder eachMenuBuilder = new EachMenuBuilder();
-        order.orderMenu(menuNumber);
-        Scanner sc = new Scanner(System.in);
-        eachMenuBuilder.buildEachMenu(sc.nextInt());
     }
 }

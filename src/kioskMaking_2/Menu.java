@@ -149,36 +149,31 @@ class MenuCollection {
 }
 
 class EachMenuBuilder {
+    MenuCollection menuCollection = new MenuCollection();
+    Kiosk kiosk = new Kiosk();
+    Scanner sc = new Scanner(System.in);
+
     public void buildEachMenu(int orderNumber) {
-        MenuCollection menuCollection = new MenuCollection();
-        Main main = new Main();
-        Order order = new Order();
-        Scanner sc = new Scanner(System.in);
+        if (orderNumber <= menuCollection.menuList().size() && orderNumber >= 1) {
+            String menuName = menuCollection.menuList().get(orderNumber - 1).getMenuName();
+            menuCollection.menuBar(menuName);
 
-        while (true) {
-            if (orderNumber <= menuCollection.menuList().size() && orderNumber >= 1) {
-                String menuName = menuCollection.menuList().get(orderNumber - 1).getMenuName();
-                menuCollection.menuBar(menuName);
-
-                System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
-                int menuNumber = 1;
-                for (Product product : menuCollection.productMap().get(menuName)) {
-                    System.out.println("| " + menuNumber +". "+ product.toString());
-                    menuNumber++;
-                }
-                System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
-
-                order.orderMenu(menuNumber);
-                order.checkMenuOrder(menuName, sc.nextInt());
-            } else if (orderNumber == menuCollection.menuList().size() + 1) {
-                order.shoppingCart();
-            } else if (orderNumber == menuCollection.menuList().size() + 2) {
-                order.rebootShoppingCart();
-                main.kioskStarter();
-            } else {
-                System.out.println("다시 입력해주세요");
-                main.kioskStarter();
+            System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
+            int menuNumber = 1;
+            for (Product product : menuCollection.productMap().get(menuName)) {
+                System.out.println("| " + menuNumber +". "+ product.toString());
+                menuNumber++;
             }
+            System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
+
+            kiosk.orderMenu(menuNumber);
+            kiosk.checkMenuOrder(menuName, sc.nextInt());
+        } else if (orderNumber == menuCollection.menuList().size() + 1) {
+            kiosk.shoppingCart();
+        } else if (orderNumber == menuCollection.menuList().size() + 2) {
+            kiosk.rebootShoppingCart();
+        } else {
+            System.out.println("다시 입력해주세요");
         }
     }
 }

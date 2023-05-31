@@ -5,10 +5,10 @@ public class Cart {
     private int price;
     private int count;
 
-    public Cart(String menuName, int price, int count) {
+    public Cart(String menuName, int price) {
         this.menuName = menuName;
         this.price = price;
-        this.count = count;
+        this.count = 1;
     }
 
     public String toString() { return String.format("%-13s   %d    %d", getMenuName(), getPrice(), getCount()); }
