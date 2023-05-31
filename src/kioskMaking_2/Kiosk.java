@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Kiosk {
     Order ord = new Order();
     MenuCollection menuCollection = new MenuCollection();
+    Waiting waiting = new Waiting();
 
     // 장바구니 확인, 주문 초기화 메뉴
     public void orderMenu(int menuNumber) {
@@ -55,7 +56,7 @@ public class Kiosk {
         if (check == 1) {
             // 총 판매 금액, 목록에 저장하는 메서드
             ord.rebootOrder();
-            // 주문번호를 출력하는 메서드
+            waiting.waitingNumber();
         } else if (check == 2) {
             System.out.println("주문을 취소하였습니다.");
         } else {

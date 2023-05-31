@@ -7,10 +7,6 @@ public class Product extends Menu {
         return menuPrice;
     }
 
-    public void setMenuPrice(int menuPrice) {
-        this.menuPrice = menuPrice;
-    }
-
     public Product(String menuName, String menuDesc, int menuPrice) {
         super(menuName, menuDesc);
         this.menuPrice = menuPrice;

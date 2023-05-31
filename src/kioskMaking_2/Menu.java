@@ -18,16 +18,8 @@ public class Menu {
         return menuName;
     }
 
-    public void setMenuName(String menuName) {
-        this.menuName = menuName;
-    }
-
     public String getMenuDesc() {
         return menuDesc;
-    }
-
-    public void setMenuDesc(String menuDesc) {
-        this.menuDesc = menuDesc;
     }
 
     public String toString() {

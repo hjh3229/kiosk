@@ -3,8 +3,6 @@ package kioskMaking_2;
 import java.util.*;
 
 public class Order {
-
-
     //     장바구니 생성
     private ArrayList<Cart> order;
     public Order() {
@@ -43,5 +41,18 @@ public class Order {
     // 장바구니 초기화
     public void rebootOrder() {
         order.clear();
+    }
+}
+
+class Waiting {
+    private int waitingNumber;
+
+    public Waiting() {
+        waitingNumber = 0;
+    }
+
+    public void waitingNumber() {
+        waitingNumber++;
+        System.out.println("\n손님의 대기 번호는 [" + waitingNumber + "]번 입니다.\n");
     }
 }
