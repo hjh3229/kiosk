@@ -154,7 +154,7 @@ class EachMenuBuilder {
         Main main = new Main();
         Order order = new Order();
         Scanner sc = new Scanner(System.in);
-        menuLoop:
+
         while (true) {
             if (orderNumber <= menuCollection.menuList().size() && orderNumber >= 1) {
                 String menuName = menuCollection.menuList().get(orderNumber - 1).getMenuName();

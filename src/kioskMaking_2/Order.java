@@ -1,9 +1,34 @@
 package kioskMaking_2;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Order {
+    private ArrayList<Cart> order;
+
+    // 장바구니 생성
+    public Order() {
+        order = new ArrayList<>();
+    }
+
+    // 장바구니에 추가
+    public void addCart(String menuName, int price, int count) {
+        for (Cart cart : order) {
+            if (cart.getMenuName().equals(menuName)) { // 만약 같은 이름의 메뉴가 이미 있다면 개수만 +1
+                cart.plusCount();
+                return;
+            }
+        }
+        order.add(new Cart(menuName, price, count));
+    }
+
+    // 장바구니 출력
+    public void printCart() {
+        for (Cart cart : order) {
+            System.out.println(cart.toString());
+        }
+    }
+
+
     // 장바구니 확인, 주문 초기화 메뉴
     public void orderMenu(int menuNumber) {
         System.out.println("\n[주문 확인/취소]");
@@ -23,8 +48,7 @@ public class Order {
             Scanner scanner = new Scanner(System.in);
             int check = scanner.nextInt();
             if (check == 1) {
-                // 장바구니에 추가 메서드
-
+                addCart(menuCollection.productMap().get(menuName).get(orderNumber - 1).getMenuName(), menuCollection.productMap().get(menuName).get(orderNumber - 1).getMenuPrice(), 1);
                 System.out.println("장바구니에 추가하였습니다.");
                 System.out.println();
                 main.kioskStarter(); // 장바구니에 담으면 메인메뉴로 돌아가기
@@ -50,12 +74,15 @@ public class Order {
         System.out.println("아래와 같이 주문하시겠습니까?");
         System.out.println();
         System.out.println("[주문 내역]");
+        printCart();
+        System.out.println();
         System.out.println("1. 확인       2. 취소");
 
         Scanner sc = new Scanner(System.in);
         int check = sc.nextInt();
         if (check == 1) {
-            // 장바구니에 추가하는 메서드
+            // 총 판매 금액, 목록에 저장하는 메서드
+            // 장바구니를 초기화 하는 메서드
             main.kioskStarter();
         } else if (check == 2) {
             System.out.println("주문을 취소하였습니다.");
@@ -71,10 +98,15 @@ public class Order {
 
         System.out.println("장바구니를 초기화하시겠습니까?");
         System.out.println();
-        System.out.println("초기화하였습니다.");
-        main.kioskStarter();
+        System.out.println("1. 확인       2. 취소");
+        Scanner sc = new Scanner(System.in);
+        int answer = sc.nextInt();
+        if (answer == 1) {
+            // 장바구니를 초기화 하는 메서드
+            System.out.println("초기화하였습니다.");
+            main.kioskStarter();
+        } else if (answer == 2) {
+            System.out.println("취소하였습니다.");
+        }
     }
-}
-
-class Cart {
 }
