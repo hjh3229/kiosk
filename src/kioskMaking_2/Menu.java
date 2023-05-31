@@ -56,8 +56,7 @@ class MenuCollection {
     }
 
     public Map<String, ArrayList<Product>> productMap() {
-        MenuCollection menuCollection = new MenuCollection();
-        menuCollection.menuList();
+        ArrayList<Menu> menuList = menuList();
         Map<String, ArrayList<Product>> productMap = new HashMap<>(); // 전체 메뉴
         // 커피 메뉴
         ArrayList<Product> products = new ArrayList<Product>();

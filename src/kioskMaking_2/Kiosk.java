@@ -54,7 +54,8 @@ public class Kiosk {
         int check = sc.nextInt();
         if (check == 1) {
             // 총 판매 금액, 목록에 저장하는 메서드
-            // 장바구니를 초기화 하는 메서드
+            ord.rebootOrder();
+            // 주문번호를 출력하는 메서드
         } else if (check == 2) {
             System.out.println("주문을 취소하였습니다.");
         } else {
@@ -70,7 +71,7 @@ public class Kiosk {
         Scanner sc = new Scanner(System.in);
         int answer = sc.nextInt();
         if (answer == 1) {
-            // 장바구니를 초기화 하는 메서드
+            ord.rebootOrder();
             System.out.println("초기화하였습니다.");
         } else if (answer == 2) {
             System.out.println("취소하였습니다.");

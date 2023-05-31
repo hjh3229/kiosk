@@ -8,9 +8,11 @@ public class Main {
         main.kioskStarter();
     }
 
+    Kiosk kiosk = new Kiosk();
+    EachMenuBuilder eachMenuBuilder = new EachMenuBuilder();
     public void kioskStarter() {
         MenuCollection menuCollection = new MenuCollection();
-        Kiosk kiosk = new Kiosk();
+
 
         while (true) {
             menuCollection.menuBar("메가커피");
@@ -23,8 +25,7 @@ public class Main {
             }
             System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
 
-            Order order = new Order();
-            EachMenuBuilder eachMenuBuilder = new EachMenuBuilder();
+
             kiosk.orderMenu(menuNumber);
             Scanner sc = new Scanner(System.in);
             eachMenuBuilder.buildEachMenu(sc.nextInt());
