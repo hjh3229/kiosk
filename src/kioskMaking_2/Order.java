@@ -10,14 +10,13 @@ public class Order {
     }
 
     // 장바구니에 추가
-    public void addOrder(String menuName, int price) {
+    public void addOrder(String menuName, int price, int count) {
         Cart plusCount = plusCount(menuName);
         if (plusCount != null) {
-            plusCount.plusCount();
+            plusCount.plusCount(count);
         } else {
-            Cart cart = new Cart(menuName, price);
+            Cart cart = new Cart(menuName, price, count);
             order.add(cart);
-            System.out.println(order.get(0).toString());
         }
     }
 
@@ -50,6 +49,16 @@ public class Order {
             totalPrice += (cart.getPrice() * cart.getCount());
         }
         return totalPrice;
+    }
+
+    // 현재 리시트를 다른 리스트에 옮기기
+    public void total(Order order) {
+        for (Cart cart : order.order) {
+            String menuName = cart.getMenuName();
+            int price = cart.getPrice();
+            int count = cart.getCount();
+            this.addOrder(menuName, price, count);
+        }
     }
 }
 

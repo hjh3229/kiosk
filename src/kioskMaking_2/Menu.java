@@ -29,6 +29,8 @@ public class Menu {
 
 class MenuCollection {
     public void menuBar(String menu) {
+        System.out.println();
+        System.out.println();
         System.out.println("MegaCoffee에 오신 것을 환영합니다!!");
         System.out.println("아래에서 메뉴판을 보고 주문하실 메뉴를 골라주세요!\n");
 
@@ -156,13 +158,16 @@ class EachMenuBuilder {
                 menuNumber++;
             }
             System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
-
             kiosk.orderMenu(menuNumber);
-            kiosk.checkMenuOrder(menuName, sc.nextInt());
+            System.out.print("숫자를 눌러 메뉴를 선택해주세요. : ");
+            int check = sc.nextInt();
+            kiosk.checkMenuOrder(menuName, check);
         } else if (orderNumber == menuCollection.menuList().size() + 1) {
             kiosk.shoppingCart();
         } else if (orderNumber == menuCollection.menuList().size() + 2) {
             kiosk.rebootShoppingCart();
+        } else if (orderNumber == 0) {
+            kiosk.printTotal();
         } else {
             System.out.println("다시 입력해주세요");
         }

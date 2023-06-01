@@ -7,16 +7,16 @@ public class Cart {
     private int price;
     private int count;
 
-    public Cart(String menuName, int price) {
+    public Cart(String menuName, int price, int count) {
         this.menuName = menuName;
         this.price = price;
-        this.count = 1;
+        this.count = count;
     }
 
     public String toString() { return String.format("%-13s   %d    %d", menuName, (price * count), count); }
 
-    public void plusCount() {
-        count++;
+    public void plusCount(int count) {
+        this.count += count;
     }
 
     public String getMenuName() {
