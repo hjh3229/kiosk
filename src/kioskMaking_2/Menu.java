@@ -162,11 +162,11 @@ class EachMenuBuilder {
             System.out.print("숫자를 눌러 메뉴를 선택해주세요. : ");
             int check = sc.nextInt();
             kiosk.checkMenuOrder(menuName, check);
-        } else if (orderNumber == menuCollection.menuList().size() + 1) {
+        } else if (orderNumber == menuCollection.menuList().size() + 1) { // 메뉴 개수 + 1 누르면 장바구니 확인
             kiosk.shoppingCart();
-        } else if (orderNumber == menuCollection.menuList().size() + 2) {
+        } else if (orderNumber == menuCollection.menuList().size() + 2) { // 메뉴 개수 + 2 누르면 장바구니 초기화
             kiosk.rebootShoppingCart();
-        } else if (orderNumber == 0) {
+        } else if (orderNumber == 0) { // 0 누르면 총 매출액 확인
             kiosk.printTotal();
         } else {
             System.out.println("다시 입력해주세요");

@@ -56,7 +56,7 @@ public class Kiosk {
         System.out.println("[주문 내역]");
         personalOrder.printOrder();
         System.out.println();
-        System.out.println("총 주문 액수 : " + personalOrder.sumPrice());
+        System.out.println("총 주문 액수 : ₩ " + personalOrder.sumPrice());
         System.out.println();
         System.out.println("1. 확인       2. 취소");
         System.out.println();
@@ -96,7 +96,7 @@ public class Kiosk {
         System.out.println("[판매 내역]");
         totalOrder.printOrder();
         System.out.println();
-        System.out.println("총 판매 액수 : " + totalOrder.sumPrice());
+        System.out.println("총 판매 액수 : ₩ " + totalOrder.sumPrice());
         System.out.println();
         System.out.print("닫기 위해선 아무 숫자나 눌러주세요.");
 

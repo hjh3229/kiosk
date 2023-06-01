@@ -13,7 +13,7 @@ public class Cart {
         this.count = count;
     }
 
-    public String toString() { return String.format("%-13s   %d    %d", menuName, (price * count), count); }
+    public String toString() { return String.format("%-13s   ₩ %d    %d", menuName, (price * count), count); }
 
     public void plusCount(int count) {
         this.count += count;
