@@ -51,7 +51,7 @@ public class Order {
         return totalPrice;
     }
 
-    // 현재 리시트를 다른 리스트에 옮기기
+    // 장바구니 내용을 지우기 전에 전체 결산으로 옮기기
     public void total(Order order) {
         for (Cart cart : order.order) {
             String menuName = cart.getMenuName();
