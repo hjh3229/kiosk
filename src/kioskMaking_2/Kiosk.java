@@ -32,7 +32,7 @@ public class Kiosk {
             System.out.print("숫자를 눌러 선택해주세요. : ");
             int check = scanner.nextInt();
             if (check == 1) { // 옵션 추가 메서드가 boolean을 반환하게 해서 true 시 장바구니 추가, 아니면 탈출하도록
-                personalOrder.addOrder(menuCollection.productMap().get(menuName).get(orderNumber - 1).getMenuName(), menuCollection.productMap().get(menuName).get(orderNumber - 1).getMenuPrice(), 1);
+                personalOrder.addPersonalOrder(menuCollection.productMap().get(menuName).get(orderNumber - 1).getMenuName(), menuCollection.productMap().get(menuName).get(orderNumber - 1).getMenuPrice(), 1);
                 if (personalOrder.addOption(menuName)) {
                     System.out.print("");
                 } else if (!personalOrder.addOption(menuName)) {

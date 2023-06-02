@@ -14,8 +14,8 @@ public class Cart {
     }
 
     public String toString() {
-        if (count == 0) { // 개수를 선택 안하는 옵션 선택 시 메뉴만 입력
-            return String.format("%s",menuName);
+        if (price == 0) { // 가격을 선택 안하는 옵션 선택 시 메뉴와 개수만 입력
+            return String.format("%-13s               %d",menuName, count);
         }
         return String.format("%-13s   ₩ %d    %d", menuName, (price * count), count);
     }

@@ -16,7 +16,7 @@ public class Order {
         boolean option = true;
         String optionName;
         int optionPrice = 0;
-        int optionCount = 0;
+        int optionCount = 1;
         if (!menuCollection.menuList().get(6).getMenuName().equals(menuName)) { // 디저트가 아니라면 옵션 추가
             if (menuCollection.menuList().get(0).getMenuName().equals(menuName) || menuCollection.menuList().get(1).getMenuName().equals(menuName) || menuCollection.menuList().get(2).getMenuName().equals(menuName)) {
                 // 메뉴가 커피 & 콜드브루 or 라떼 or 초코
@@ -50,6 +50,7 @@ public class Order {
             if (menuCollection.menuList().get(0).getMenuName().equals(menuName) || menuCollection.menuList().get(1).getMenuName().equals(menuName)) {
                 // 메뉴가 커피 & 콜드브루 or 라떼
                 while (true) { // 샷 추가 얼마든지 가능
+                    optionPrice = 0; // 옵션 선택할 때마다 옵션 가격 초기화
                     System.out.println();
                     System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
                     System.out.println("| 샷 옵션을 선택해 주세요");
@@ -66,7 +67,6 @@ public class Order {
                     if (check == 1) {
                         optionName = "+ 샷 추가";
                         optionPrice = 500;
-                        optionCount = 1;
                         addOrder(optionName, optionPrice, optionCount);
                     } else if (check == 2) {
                         optionName = "+ 연하게";
@@ -81,6 +81,7 @@ public class Order {
                     }
                 }
                 while (true) { // 시럽 추가
+                    optionPrice = 0; // 옵션 선택할 때마다 옵션 가격 초기화
                     System.out.println();
                     System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
                     System.out.println("| 시럽 옵션을 선택해 주세요");
@@ -97,12 +98,10 @@ public class Order {
                     if (check == 1) {
                         optionName = "+ 바닐라 시럽 추가";
                         optionPrice = 500;
-                        optionCount = 1;
                         addOrder(optionName, optionPrice, optionCount);
                     } else if (check == 2) {
                         optionName = "+ 헤이즐넛 시럽 추가";
                         optionPrice = 500;
-                        optionCount = 1;
                         addOrder(optionName, optionPrice, optionCount);
                     } else if (check == 3) {
                         break;
@@ -114,6 +113,7 @@ public class Order {
                 }
             }
             while (true) { // 모든 메뉴 휘핑크림, 알로에, 타피오카 얼마든지 추가가능
+                optionPrice = 0; // 옵션 선택할 때마다 옵션 가격 초기화
                 System.out.println();
                 System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
                 System.out.println("| 추가 옵션을 선택해 주세요");
@@ -131,17 +131,14 @@ public class Order {
                 if (check == 1) {
                     optionName = "+ 휘핑크림 추가";
                     optionPrice = 500;
-                    optionCount = 1;
                     addOrder(optionName, optionPrice, optionCount);
                 } else if (check == 2) {
                     optionName = "+ 알로에 펄 추가";
                     optionPrice = 500;
-                    optionCount = 1;
                     addOrder(optionName, optionPrice, optionCount);
                 } else if (check == 3) {
                     optionName = "+ 타피오카 펄 추가";
                     optionPrice = 500;
-                    optionCount = 1;
                     addOrder(optionName, optionPrice, optionCount);
                 } else if (check == 4) {
                     break;
@@ -152,6 +149,7 @@ public class Order {
                 }
             }
             while (true) { // 개인 컵 여부
+                optionPrice = 0; // 옵션 선택할 때마다 옵션 가격 초기화
                 System.out.println();
                 System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
                 System.out.println("| 일회용을 사용하시겠습니까?");
@@ -166,7 +164,6 @@ public class Order {
                 if (check == 1) {
                     optionName = "+ 일회용 컵 사용";
                     optionPrice = 500;
-                    optionCount = 1;
                     addOrder(optionName, optionPrice, optionCount);
                     break;
                 } else if (check == 2) {
@@ -185,6 +182,11 @@ public class Order {
             }
         }
         return option;
+    }
+
+    public void addPersonalOrder(String menuName, int price, int count) {
+        Cart cart = new Cart(menuName, price, count);
+        order.add(cart);
     }
 
     // 장바구니에 추가
