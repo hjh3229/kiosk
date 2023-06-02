@@ -69,13 +69,14 @@ class MenuCollection {
         products = new ArrayList<Product>();
         products.add(new Product("ㅡㅡㅡㅡㅡㅡㅡ카페라떼", "에스프레소와 부드러운 우유", 2200));
         products.add(new Product("ㅡㅡㅡㅡㅡㅡㅡ카푸치노", "에스프레소 위에 올려진 우유거품, 그리고 시나몬 파우더", 2700));
-        products.add(new Product("ㅡ바닐라/헤이즐넛 라떼", "바닐라/헤이즐넛의 풍부한 향과 라떼의 조화", 3400));
+        products.add(new Product("ㅡㅡㅡㅡㅡㅡ바닐라라떼", "바닐라의 풍부한 향과 라떼의 조화", 3400));
+        products.add(new Product("ㅡㅡㅡㅡㅡ헤이즐넛라떼", "헤이즐넛의 풍부한 향과 라떼의 조화", 3400));
         products.add(new Product("ㅡㅡㅡㅡㅡ티라미수라떼", "에스프레소와 티라미수 소스 & 우유", 3900));
         products.add(new Product("ㅡㅡㅡㅡㅡㅡㅡ딸기라떼", "산뜻하고 달콤한 딸기와 부드러운 우유", 3700));
         products.add(new Product("ㅡㅡㅡㅡㅡㅡ고구마라떼", "달콤하고 고소한 고구마와 부드러운 우유", 3500));
         products.add(new Product("ㅡㅡㅡㅡㅡㅡㅡ곡물라떼", "우유에 곡물을 더해 고소하고 든든", 3000));
         products.add(new Product("ㅡㅡㅡㅡㅡㅡ토피넛라떼", "은은하게 퍼지는 카라멜의 달달한 향기와 견과의 고소함", 3800));
-        products.add(new Product("ㅡㅡ흑당버블밀크티라떼", "타바론 얼그레이 홍차의 깊은 맛을 살린 밀크티 라떼와 진한 흑당", 3800));
+        products.add(new Product("ㅡㅡ 흑당버블밀크티라떼", "타바론 얼그레이 홍차의 깊은 맛을 살린 밀크티 라떼와 진한 흑당", 3800));
         productMap.put(menuList().get(1).getMenuName(), products);
 
         // 초코 메뉴
@@ -118,8 +119,8 @@ class MenuCollection {
         products.add(new Product("ㅡㅡㅡㅡㅡㅡㅡ 딸기주스", "새콤달콤한 딸기주스에 건강한 피쉬 콜라겐", 4000));
         products.add(new Product("ㅡㅡㅡㅡㅡㅡㅡ 수박주스", "돌아온 여름시즌 베스트셀러", 4000));
         products.add(new Product("ㅡㅡ레드오렌지자몽주스", "시칠리아 레드오렌지와 자몽에 프로바이오틱스", 4000));
-        products.add(new Product("ㅡ샤인머스캣 그린주스", "달콤한 샤인머스캑과 케일이 만난 싱그러운 주스에 칼슘", 4000));
-        products.add(new Product("ㅡㅡㅡ 딸기바나나주스", "상큼한 딸기 부드러운 바나나", 14000));
+        products.add(new Product("ㅡㅡ샤인머스캣 그린주스", "달콤한 샤인머스캑과 케일이 만난 싱그러운 주스에 칼슘", 4000));
+        products.add(new Product("ㅡㅡㅡㅡ딸기바나나주스", "상큼한 딸기 부드러운 바나나", 14000));
         productMap.put(menuList().get(5).getMenuName(), products);
 
         // 디저트
@@ -131,9 +132,9 @@ class MenuCollection {
         products.add(new Product("ㅡㅡㅡㅡㅡ초코무스 케익", "3가지 다양한 맛의 당일 만든 부드러운 케익", 3300));
         products.add(new Product("ㅡㅡㅡㅡ치티라미수 케익", "3가지 다양한 맛의 당일 만든 부드러운 케익", 3300));
         products.add(new Product("ㅡㅡㅡ쿠키/카라멜 크로넛", "당일 만든 겉은 바삭하고 속은 부드러운 크로넛", 3800));
-        products.add(new Product("ㅡㅡㅡㅡㅡㅡ잉글리시머핀", "햄,치즈,머핀의 3가지 사기조합", 3300));
-        products.add(new Product("ㅡㅡㅡㅡㅡㅡ갈릭바게트볼", "바게트 볼 속에 진한 갈릭향의 소스", 4300));
-        products.add(new Product("ㅡㅡㅡㅡㅡㅡ 크로크무슈", "햄, 세가지 치즈 특별 비법 소스가 더해진 크로크무슈", 3800));
+        products.add(new Product("ㅡㅡㅡㅡㅡ 잉글리시머핀", "햄,치즈,머핀의 3가지 사기조합", 3300));
+        products.add(new Product("ㅡㅡㅡㅡㅡ 갈릭바게트볼", "바게트 볼 속에 진한 갈릭향의 소스", 4300));
+        products.add(new Product("ㅡㅡㅡㅡㅡㅡ크로크무슈", "햄, 세가지 치즈 특별 비법 소스가 더해진 크로크무슈", 3800));
         products.add(new Product("ㅡㅡㅡㅡㅡㅡㅡㅡ 핫도그", "폭신한 빵과 육즙 터지는 소시지", 2200));
         products.add(new Product("ㅡㅡㅡㅡㅡㅡ 허니브레드", "폭신한 빵에 휘핑크림과 특제 허니소스", 4500));
         products.add(new Product("ㅡㅡㅡㅡ 딸기 생크림와플", "3가지 다양한 맛의 겉바속촉 와플", 3500));
