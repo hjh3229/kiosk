@@ -23,6 +23,7 @@ public class Kiosk {
             System.out.println();
             System.out.println();
             System.out.println(menuCollection.productMap().get(menuName).get(orderNumber - 1).toString());
+            // 여기에 옵션 추가 메서드
             System.out.println();
             System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
             System.out.println("1. 확인        2. 취소");
@@ -30,8 +31,14 @@ public class Kiosk {
             Scanner scanner = new Scanner(System.in);
             System.out.print("숫자를 눌러 선택해주세요. : ");
             int check = scanner.nextInt();
-            if (check == 1) {
+            if (check == 1) { // 옵션 추가 메서드가 boolean을 반환하게 해서 true 시 장바구니 추가, 아니면 탈출하도록
                 personalOrder.addOrder(menuCollection.productMap().get(menuName).get(orderNumber - 1).getMenuName(), menuCollection.productMap().get(menuName).get(orderNumber - 1).getMenuPrice(), 1);
+                if (personalOrder.addOption(menuName)) {
+                    System.out.print("");
+                } else if (!personalOrder.addOption(menuName)) {
+                    System.out.println("주문을 취소하였습니다.");
+                    return;
+                }
                 System.out.println("장바구니에 추가하였습니다.");
                 System.out.println();
             } else if (check == 2) {

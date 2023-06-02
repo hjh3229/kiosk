@@ -8,6 +8,184 @@ public class Order {
     public Order() {
         order = new ArrayList<>();
     }
+    MenuCollection menuCollection = new MenuCollection();
+    Scanner sc = new Scanner(System.in);
+
+    // 옵션 추가
+    public boolean addOption(String menuName) { // 메뉴 카테고리만 확인
+        boolean option = true;
+        String optionName;
+        int optionPrice = 0;
+        int optionCount = 0;
+        if (!menuCollection.menuList().get(6).getMenuName().equals(menuName)) { // 디저트가 아니라면 옵션 추가
+            if (menuCollection.menuList().get(0).getMenuName().equals(menuName) || menuCollection.menuList().get(1).getMenuName().equals(menuName) || menuCollection.menuList().get(2).getMenuName().equals(menuName)) {
+                // 메뉴가 커피 & 콜드브루 or 라떼 or 초코
+                while (true) { // HOT, ICED 선택 가능
+                    System.out.println();
+                    System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
+                    System.out.println("| HOT or ICED를 선택해주세요.");
+                    System.out.println("| 1. HOT");
+                    System.out.println("| 2. ICED");
+                    System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
+                    System.out.println();
+                    System.out.println("주문을 취소하고 싶으시다면 0을 눌러주세요.");
+                    System.out.print("선택해 주세요 : ");
+                    int check = sc.nextInt();
+                    if (check == 1) {
+                        optionName = "+ HOT";
+                        addOrder(optionName, optionPrice, optionCount);
+                        System.out.println(optionName);
+                        break;
+                    } else if (check == 2) {
+                        optionName = "+ ICED";
+                        addOrder(optionName, optionPrice, optionCount);
+                        break;
+                    } else if (check == 0) {
+                        return !option;
+                    } else {
+                        System.out.println("제대로 선택해 주세요.");
+                    }
+                }
+            }
+            if (menuCollection.menuList().get(0).getMenuName().equals(menuName) || menuCollection.menuList().get(1).getMenuName().equals(menuName)) {
+                // 메뉴가 커피 & 콜드브루 or 라떼
+                while (true) { // 샷 추가 얼마든지 가능
+                    System.out.println();
+                    System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
+                    System.out.println("| 샷 옵션을 선택해 주세요");
+                    System.out.println("| 1. 샷 추가 (+ 500)");
+                    System.out.println("| 2. 연하게 (주의!! : 샷 추가 가격은 받습니다!!)");
+                    System.out.println("|");
+                    System.out.println("|");
+                    System.out.println("| 3. 확인");
+                    System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
+                    System.out.println();
+                    System.out.println("주문을 취소하고 싶으시다면 0을 눌러주세요.");
+                    System.out.print("선택해 주세요 : ");
+                    int check = sc.nextInt();
+                    if (check == 1) {
+                        optionName = "+ 샷 추가";
+                        optionPrice = 500;
+                        optionCount = 1;
+                        addOrder(optionName, optionPrice, optionCount);
+                    } else if (check == 2) {
+                        optionName = "+ 연하게";
+                        addOrder(optionName, optionPrice, optionCount);
+                        break;
+                    } else if (check == 3) {
+                        break;
+                    } else if (check == 0) {
+                        return !option;
+                    } else {
+                        System.out.println("제대로 선택해 주세요.");
+                    }
+                }
+                while (true) { // 시럽 추가
+                    System.out.println();
+                    System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
+                    System.out.println("| 시럽 옵션을 선택해 주세요");
+                    System.out.println("| 1. 바닐라 시럽 추가 (+ 500)");
+                    System.out.println("| 2. 헤이즐넛 시럽 추가 (+ 500)");
+                    System.out.println("|");
+                    System.out.println("|");
+                    System.out.println("| 3. 확인");
+                    System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
+                    System.out.println();
+                    System.out.println("주문을 취소하고 싶으시다면 0을 눌러주세요.");
+                    System.out.print("선택해 주세요 : ");
+                    int check = sc.nextInt();
+                    if (check == 1) {
+                        optionName = "+ 바닐라 시럽 추가";
+                        optionPrice = 500;
+                        optionCount = 1;
+                        addOrder(optionName, optionPrice, optionCount);
+                    } else if (check == 2) {
+                        optionName = "+ 헤이즐넛 시럽 추가";
+                        optionPrice = 500;
+                        optionCount = 1;
+                        addOrder(optionName, optionPrice, optionCount);
+                    } else if (check == 3) {
+                        break;
+                    } else if (check == 0) {
+                        return !option;
+                    } else {
+                        System.out.println("제대로 선택해 주세요.");
+                    }
+                }
+            }
+            while (true) { // 모든 메뉴 휘핑크림, 알로에, 타피오카 얼마든지 추가가능
+                System.out.println();
+                System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("| 추가 옵션을 선택해 주세요");
+                System.out.println("| 1. 휘핑크림 추가 (+ 500)");
+                System.out.println("| 2. 알로에 펄 추가 (+ 500)");
+                System.out.println("| 3. 타피오카 펄 추가 (+ 500)");
+                System.out.println("|");
+                System.out.println("|");
+                System.out.println("| 4. 확인");
+                System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
+                System.out.println();
+                System.out.println("주문을 취소하고 싶으시다면 0을 눌러주세요.");
+                System.out.print("선택해 주세요 : ");
+                int check = sc.nextInt();
+                if (check == 1) {
+                    optionName = "+ 휘핑크림 추가";
+                    optionPrice = 500;
+                    optionCount = 1;
+                    addOrder(optionName, optionPrice, optionCount);
+                } else if (check == 2) {
+                    optionName = "+ 알로에 펄 추가";
+                    optionPrice = 500;
+                    optionCount = 1;
+                    addOrder(optionName, optionPrice, optionCount);
+                } else if (check == 3) {
+                    optionName = "+ 타피오카 펄 추가";
+                    optionPrice = 500;
+                    optionCount = 1;
+                    addOrder(optionName, optionPrice, optionCount);
+                } else if (check == 4) {
+                    break;
+                } else if (check == 0) {
+                    return !option;
+                } else {
+                    System.out.println("제대로 선택해 주세요.");
+                }
+            }
+            while (true) { // 개인 컵 여부
+                System.out.println();
+                System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("| 일회용을 사용하시겠습니까?");
+                System.out.println("| 1. 일회용 컵 포장(일회용 컵 반환 시 돌려드립니다.) (+ 500)");
+                System.out.println("| 2. 개인 컵 사용");
+                System.out.println("| 3. 매장 내 이용");
+                System.out.println("+---------------------------------------------------------------------------------------------------------------------------");
+                System.out.println();
+                System.out.println("주문을 취소하고 싶으시다면 0을 눌러주세요.");
+                System.out.print("선택해 주세요 : ");
+                int check = sc.nextInt();
+                if (check == 1) {
+                    optionName = "+ 일회용 컵 사용";
+                    optionPrice = 500;
+                    optionCount = 1;
+                    addOrder(optionName, optionPrice, optionCount);
+                    break;
+                } else if (check == 2) {
+                    optionName = "+ 개인 컵 사용";
+                    addOrder(optionName, optionPrice, optionCount);
+                    break;
+                } else if (check == 3) {
+                    optionName = "+ 매장";
+                    addOrder(optionName, optionPrice, optionCount);
+                    break;
+                } else if (check == 0) {
+                    return !option;
+                } else {
+                    System.out.println("제대로 선택해 주세요.");
+                }
+            }
+        }
+        return option;
+    }
 
     // 장바구니에 추가
     public void addOrder(String menuName, int price, int count) {

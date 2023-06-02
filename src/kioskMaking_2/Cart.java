@@ -13,7 +13,12 @@ public class Cart {
         this.count = count;
     }
 
-    public String toString() { return String.format("%-13s   ₩ %d    %d", menuName, (price * count), count); }
+    public String toString() {
+        if (count == 0) { // 개수를 선택 안하는 옵션 선택 시 메뉴만 입력
+            return String.format("%s",menuName);
+        }
+        return String.format("%-13s   ₩ %d    %d", menuName, (price * count), count);
+    }
 
     public void plusCount(int count) {
         this.count += count;
