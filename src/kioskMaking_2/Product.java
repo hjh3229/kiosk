@@ -13,6 +13,6 @@ public class Product extends Menu {
     }
 
     public String toString() {
-        return String.format("%-10s | ₩ %5d | %s", getMenuName(), getMenuPrice(), getMenuDesc());
+        return String.format("%-13s | ₩ %5d | %s", getMenuName(), getMenuPrice(), getMenuDesc());
     }
 }

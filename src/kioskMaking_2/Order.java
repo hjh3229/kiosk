@@ -32,12 +32,12 @@ public class Order {
                     System.out.print("선택해 주세요 : ");
                     int check = sc.nextInt();
                     if (check == 1) {
-                        optionName = "+ HOT";
+                        optionName = "+ ㅡㅡㅡㅡㅡㅡHOT";
                         addOrder(optionName, optionPrice, optionCount);
                         System.out.println(optionName);
                         break;
                     } else if (check == 2) {
-                        optionName = "+ ICED";
+                        optionName = "+ ㅡㅡㅡㅡㅡㅡICED";
                         addOrder(optionName, optionPrice, optionCount);
                         break;
                     } else if (check == 0) {
@@ -65,11 +65,11 @@ public class Order {
                     System.out.print("선택해 주세요 : ");
                     int check = sc.nextInt();
                     if (check == 1) {
-                        optionName = "+ 샷 추가";
+                        optionName = "+ ㅡㅡㅡㅡㅡㅡㅡ 샷 추가";
                         optionPrice = 500;
                         addOrder(optionName, optionPrice, optionCount);
                     } else if (check == 2) {
-                        optionName = "+ 연하게";
+                        optionName = "+ ㅡㅡㅡ연하게";
                         addOrder(optionName, optionPrice, optionCount);
                         break;
                     } else if (check == 3) {
@@ -96,11 +96,11 @@ public class Order {
                     System.out.print("선택해 주세요 : ");
                     int check = sc.nextInt();
                     if (check == 1) {
-                        optionName = "+ 바닐라 시럽 추가";
+                        optionName = "+ ㅡㅡㅡ바닐라 시럽 추가";
                         optionPrice = 500;
                         addOrder(optionName, optionPrice, optionCount);
                     } else if (check == 2) {
-                        optionName = "+ 헤이즐넛 시럽 추가";
+                        optionName = "+ ㅡㅡ헤이즐넛 시럽 추가";
                         optionPrice = 500;
                         addOrder(optionName, optionPrice, optionCount);
                     } else if (check == 3) {
@@ -129,15 +129,15 @@ public class Order {
                 System.out.print("선택해 주세요 : ");
                 int check = sc.nextInt();
                 if (check == 1) {
-                    optionName = "+ 휘핑크림 추가";
+                    optionName = "+ ㅡㅡㅡㅡ 휘핑크림 추가";
                     optionPrice = 500;
                     addOrder(optionName, optionPrice, optionCount);
                 } else if (check == 2) {
-                    optionName = "+ 알로에 펄 추가";
+                    optionName = "+ ㅡㅡㅡㅡ알로에 펄 추가";
                     optionPrice = 500;
                     addOrder(optionName, optionPrice, optionCount);
                 } else if (check == 3) {
-                    optionName = "+ 타피오카 펄 추가";
+                    optionName = "+ ㅡㅡㅡ타피오카 펄 추가";
                     optionPrice = 500;
                     addOrder(optionName, optionPrice, optionCount);
                 } else if (check == 4) {
@@ -162,16 +162,16 @@ public class Order {
                 System.out.print("선택해 주세요 : ");
                 int check = sc.nextInt();
                 if (check == 1) {
-                    optionName = "+ 일회용 컵 사용";
+                    optionName = "+ ㅡㅡㅡㅡ일회용 컵 사용";
                     optionPrice = 500;
                     addOrder(optionName, optionPrice, optionCount);
                     break;
                 } else if (check == 2) {
-                    optionName = "+ 개인 컵 사용";
+                    optionName = "+ ㅡ개인 컵 사용";
                     addOrder(optionName, optionPrice, optionCount);
                     break;
                 } else if (check == 3) {
-                    optionName = "+ 매장";
+                    optionName = "+ ㅡㅡㅡㅡ매장";
                     addOrder(optionName, optionPrice, optionCount);
                     break;
                 } else if (check == 0) {
